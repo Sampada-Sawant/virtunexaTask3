@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Session Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Study Session Planner</h1>
+            <p>Plan study sessions with your classmates</p>
+        </header>
+
+        <main>
+            <section class="create-session">
+                <h2>Create New Study Session</h2>
+                <form id="session-form">
+                    <div class="form-group">
+                        <label for="session-name">Session Name:</label>
+                        <input type="text" id="session-name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="session-date">Date:</label>
+                        <input type="date" id="session-date" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="session-time">Time:</label>
+                        <input type="time" id="session-time" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="session-tasks">Tasks (comma separated):</label>
+                        <textarea id="session-tasks" rows="3" required></textarea>
+                    </div>
+                    
+                    <button type="submit">Create Session</button>
+                </form>
+            </section>
+
+            <section class="sessions-list">
+                <h2>Upcoming Study Sessions</h2>
+                <div id="sessions-container">
+                    <!-- Sessions will be added here by JavaScript -->
+                    <p class="empty-message">No study sessions planned yet.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
